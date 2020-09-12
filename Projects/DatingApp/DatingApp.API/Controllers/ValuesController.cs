@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DatingApp.API.Controllers
 {
+    // http:localhost:5000/api/values
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -14,7 +15,7 @@ namespace DatingApp.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "value3" };
         }
 
         // GET api/values/5
