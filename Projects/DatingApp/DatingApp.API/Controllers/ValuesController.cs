@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DatingApp.API.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DatingApp.API.Controllers
@@ -11,18 +12,26 @@ namespace DatingApp.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly DataContext _context;
+        public ValuesController(DataContext context)
         {
-            return new string[] { "value1", "value3" };
+            this._context = context;
+
+        }
+        // GET api/values 
+        [HttpGet]
+        public IActionResult GetValues()
+        {
+            var values=_context.Values.ToList();
+            return Ok(values);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public IActionResult GetValue(int id)
         {
-            return "value";
+            var value=_context.Values.FirstOrDefault(x => x.Id==id);
+            return Ok(value);
         }
 
         // POST api/values
