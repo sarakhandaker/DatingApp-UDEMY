@@ -62,3 +62,7 @@
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
