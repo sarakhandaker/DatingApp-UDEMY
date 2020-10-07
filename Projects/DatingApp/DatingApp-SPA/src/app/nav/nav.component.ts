@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { threadId } from 'worker_threads';
 import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
 
@@ -12,7 +11,7 @@ export class NavComponent implements OnInit {
 
   model: any = {};
 
-  constructor(private authService: AuthService, private alertify: AlertifyService) { }
+  constructor(public authService: AuthService, private alertify: AlertifyService) { }
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
@@ -22,14 +21,13 @@ export class NavComponent implements OnInit {
   login() {
     this.authService.login(this.model).subscribe(next => {
       this.alertify.success('Logged in succesfully');
-    }, error => {
-      this.alertify.error(error);
-    });
+    }, error => { this.alertify.error(error); }
+    );
   }
 
   // tslint:disable-next-line: typedef
   loggedIn(){
-    this.authService.loggedIn();
+    return this.authService.loggedIn();
   }
 
   // tslint:disable-next-line: typedef
