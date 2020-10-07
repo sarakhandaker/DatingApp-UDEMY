@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { threadId } from 'worker_threads';
 import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
 
@@ -28,8 +29,7 @@ export class NavComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   loggedIn(){
-    const token = localStorage.getItem('token');
-    return !!token;
+    this.authService.loggedIn();
   }
 
   // tslint:disable-next-line: typedef
