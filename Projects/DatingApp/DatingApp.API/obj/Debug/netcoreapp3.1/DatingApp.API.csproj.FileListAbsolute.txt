@@ -66,3 +66,4 @@
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/bin/Debug/netcoreapp3.1/Data/UserSeedData.json
