@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iOFatHzj1IP8PyVWIKaYXj9vAjC/fkfdpLSNPvhGGrFw1ux4ss7k8UCuNp11i2gZkaTNqaxDDNygy1hbeVz7xQ==",
+  "dgSpecHash": "9+1E3vCdyTetHHQSoYI6TrcQYVe005eBdQnqCI/m+eDIHNu17dKZPan2wCFkCJyHLIQZH56bpARkXbywCYly+Q==",
   "success": true,
   "projectFilePath": "/Users/sarakhandaker/Projects/DatingApp/DatingApp.API/DatingApp.API.csproj",
   "expectedPackageFiles": [
+    "/Users/sarakhandaker/.nuget/packages/automapper/10.0.0/automapper.10.0.0.nupkg.sha512",
+    "/Users/sarakhandaker/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.0.1/automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.8/microsoft.aspnetcore.authentication.jwtbearer.3.1.8.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/microsoft.aspnetcore.jsonpatch/3.1.8/microsoft.aspnetcore.jsonpatch.3.1.8.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/3.1.8/microsoft.aspnetcore.mvc.newtonsoftjson.3.1.8.nupkg.sha512",
@@ -47,6 +49,7 @@
     "/Users/sarakhandaker/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/system.identitymodel.tokens.jwt/6.7.1/system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/sarakhandaker/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/sarakhandaker/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
   ],
