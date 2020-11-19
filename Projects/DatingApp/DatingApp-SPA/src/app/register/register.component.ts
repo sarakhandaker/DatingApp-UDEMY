@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  // tslint:disable-next-line: typedef
   register(){
     this.authService.register(this.model).subscribe(() => {
       this.alertify.success('registration sucessful');
