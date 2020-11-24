@@ -27,6 +27,6 @@ export class UserService {
 
   // tslint:disable-next-line: typedef
   setMainPhoto(userId: number, id: number){
-    return this.http.post(this.baseUrl + 'users/' + userId + '/photos' + id + '/setMain', {});
+    return this.http.post(this.baseUrl + 'users/' + userId + '/photos/' + id + '/setMain', {});
   }
 }
