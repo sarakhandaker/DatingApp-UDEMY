@@ -27,6 +27,7 @@ export class MemberEditComponent implements OnInit {
               private alertify: AlertifyService,
               private authService: AuthService) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.route.data.subscribe(data => {
       this.user = data.user;
@@ -34,6 +35,7 @@ export class MemberEditComponent implements OnInit {
     );
   }
 
+  // tslint:disable-next-line: typedef
   updateUser() {
     this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(next => {
       this.alertify.success('Profile updated successfully!');
@@ -41,7 +43,11 @@ export class MemberEditComponent implements OnInit {
     }, error => {
       this.alertify.error(error);
     });
+  }
 
+  // tslint:disable-next-line: typedef
+  updateMainPhoto(photoUrl){
+    this.user.photoUrl = photoUrl;
   }
 
 }
