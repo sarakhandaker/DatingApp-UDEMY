@@ -9,14 +9,14 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
   model: any = {};
+  photoUrl: string;
 
-  constructor(public authService: AuthService, private alertify: AlertifyService, 
-    private router: Router) { }
+  constructor(public authService: AuthService, private alertify: AlertifyService, private router: Router) { }
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
+    this.authService.currentPhotoUrl.subscribe( url => this.photoUrl = url);
   }
 
   // tslint:disable-next-line: typedef

@@ -9,45 +9,52 @@ import { UserService } from 'src/app/_services/user.service';
 @Component({
   selector: 'app-member-edit',
   templateUrl: './member-edit.component.html',
-  styleUrls: ['./member-edit.component.css']
+  styleUrls: ['./member-edit.component.css'],
 })
 export class MemberEditComponent implements OnInit {
-  @ViewChild('editForm', {static: true}) editForm: NgForm;
+  @ViewChild('editForm', { static: true }) editForm: NgForm;
   user: User;
+  photoUrl: string;
   @HostListener('window:beforeunload', ['$event'])
   // tslint:disable-next-line: typedef
-  unloadNotification($event: any){
-    if (this.editForm.dirty){
+  unloadNotification($event: any) {
+    if (this.editForm.dirty) {
       $event.returnValue = true;
     }
   }
 
-  constructor(private userService: UserService,
-              private route: ActivatedRoute,
-              private alertify: AlertifyService,
-              private authService: AuthService) { }
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private alertify: AlertifyService,
+    private authService: AuthService
+  ) {}
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
-    this.route.data.subscribe(data => {
+    this.route.data.subscribe((data) => {
       this.user = data.user;
-    }
-    );
+    });
+    this.authService.currentPhotoUrl.subscribe(url => this.photoUrl = url);
   }
 
   // tslint:disable-next-line: typedef
   updateUser() {
-    this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(next => {
-      this.alertify.success('Profile updated successfully!');
-      this.editForm.reset(this.user);
-    }, error => {
-      this.alertify.error(error);
-    });
+    this.userService
+      .updateUser(this.authService.decodedToken.nameid, this.user)
+      .subscribe(
+        (next) => {
+          this.alertify.success('Profile updated successfully!');
+          this.editForm.reset(this.user);
+        },
+        (error) => {
+          this.alertify.error(error);
+        }
+      );
   }
 
   // tslint:disable-next-line: typedef
-  updateMainPhoto(photoUrl){
+  updateMainPhoto(photoUrl) {
     this.user.photoUrl = photoUrl;
   }
-
 }
